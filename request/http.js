@@ -1,33 +1,33 @@
 const app = getApp()
 
-const request = (url, options) => {
+const request = (path, options) => {
     return new Promise((resolve, reject) => {
         wx.request({
-            url: `${app.globalData.host}${url}`,
+            url: path,
             method: options.method,
             data: options.method === 'GET' ? options.data : JSON.stringify(options.data),
             header: {
                 'Content-Type': 'application/json; charset=UTF-8',
+                'Authorization': app.globalData.token//请求头携带token
             },
             success(res) {
-                res.data.statusCode === 200 ? resolve(res.data.result) : reject(res.data.result)
-
+                res.statusCode === 200 ? resolve(res.data.result) : reject(res.data.result)
             },
-            fail(error) {
-                reject(error)
+            fail(err) {
+                console.log(err);
+                reject(err)
             }
         })
     })
 }
 
-const get = (url, options = {}) => {
-    return request(url, { method: 'GET', data: options })
+const get = (path, params = {}) => {
+    return request(path, { method: 'GET', data: params })
 }
 
-const post = (url, options) => {
-    return request(url, { method: 'POST', data: options })
+const post = (path, params) => {
+    return request(path, { method: 'POST', data: params })
 }
-
 
 
 module.exports = {
