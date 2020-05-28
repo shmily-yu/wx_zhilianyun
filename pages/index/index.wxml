@@ -1,0 +1,16 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<swiper class="" autoplay interval="3000" duration="1000" indicator-dots circular style="padding:20px">
+    <swiper-item item-id="">
+        <van-image width="100%" height="100%" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+    </swiper-item>
+    <swiper-item class="" item-id="">
+        <van-image width="100%" height="100%" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+    </swiper-item>
+    <swiper-item class="" item-id="">
+        <van-image width="100%" height="100%" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+    </swiper-item>
+</swiper>
+<van-notice-bar text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。">
+    <text slot="left-icon">【公告】</text>
+</van-notice-bar>
+<scroll-view class="" scroll-y lower-threshold="50" scroll-top="0" scroll-into-view="" scroll-with-animation="false" bindscrolltoupper="" bindscrolltolower=""></scroll-view>
