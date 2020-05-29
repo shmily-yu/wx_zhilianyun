@@ -1,1 +1,16 @@
-/* pages/acc/acc.wxss */
+.form {
+    padding: 0 40rpx;
+}
+
+.underline {
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.weui-btn {
+    background: #10aeff;
+}
+
+.link {
+    font-size: 20rpx;
+    color: #10aeff;
+}

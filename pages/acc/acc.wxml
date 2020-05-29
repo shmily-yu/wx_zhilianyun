@@ -1,17 +1,22 @@
-<view class="box">
-    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
-    <view class="logo"></view>
+<mp-toptips msg="{{error}}" type="error" show="{{error}}" />
+<view class="u-f-ajc" hover-class="none" hover-stop-propagation="false">
+    <logo logoText='欢迎登录智联云！'></logo>
+</view>
+<view class="form">
     <mp-form id="form" rules="{{rules}}" models="{{formData}}">
         <mp-cells title="单选列表项">
-            <mp-cell prop="mobile" title="手机号">
-                <input bindinput="formInputChange" data-field="mobile" class="weui-input" placeholder="手机号" />
+            <mp-cell prop="mobile_phone" title="手机号" ext-class="underline">
+                <input bindinput="formInputChange" data-field="mobile_phone" class="weui-input" type="number" maxlength="11" />
             </mp-cell>
-            <mp-cell prop="password" title="密码">
-                <input bindinput="formInputChange" data-field="password" class="weui-input" placeholder="密码" type="password" />
+            <mp-cell prop="password" title="密码" ext-class="underline">
+                <input ext-class="input-line" bindinput="formInputChange" data-field="password" class="weui-input" type="password" />
             </mp-cell>
         </mp-cells>
     </mp-form>
-    <view class="weui-btn-area">
-        <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
-    </view>
-</view> 
+</view>
+<view class="weui-btn-area">
+    <button class="weui-btn" bindtap="submitForm">登录</button>
+</view>
+<view class="u-f-ajc">
+    <navigator url="" class="link">验证码登录</navigator>
+</view>

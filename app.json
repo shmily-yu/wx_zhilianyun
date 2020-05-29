@@ -1,9 +1,10 @@
 {
   "pages": [
     "pages/acc/acc",
+    "pages/yz/yz",
     "pages/index/index",
     "pages/my/my",
-    "pages/表单验证/表单验证"
+    "component/logo/logo"
   ],
   "window": {
     "backgroundTextStyle": "light",

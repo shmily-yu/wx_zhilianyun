@@ -1,0 +1,8 @@
+<view class="" hover-class="none" hover-stop-propagation="false">
+    <view class="u-f-ajc" hover-class="none" hover-stop-propagation="false">
+        <image class="img" src="../../images/LOGO123.png" mode="aspectFit" />
+    </view>
+    <view class="u-f-ajc" hover-class="none" hover-stop-propagation="false">
+        <text class="text" selectable="false" space="false" decode="false">{{logoText}}</text>
+    </view>
+</view>

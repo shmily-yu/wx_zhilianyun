@@ -1,0 +1,8 @@
+/* component/logo/logo.wxss */
+.img {
+    width: 250rpx;
+    height: 250rpx;
+}
+.text{
+    color: #10aeff;
+}

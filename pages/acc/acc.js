@@ -2,14 +2,11 @@ Page({
   data: {
     error: '',
     formData: {
-      // mobile_phone: "",
-      // password: "",
       get_type: 0
     },
-
     rules: [
       {
-        name: 'mobile',
+        name: 'mobile_phone',
         rules: [{ required: true, message: '手机号必填' }, { mobile: true, message: '手机号格式不对' }]
       },
       {
@@ -18,13 +15,14 @@ Page({
       }
     ]
   },
+  // 键盘输入时触发
   formInputChange(e) {
-    console.log(e, this.data.formData);
     const { field } = e.currentTarget.dataset
     this.setData({
       [`formData.${field}`]: e.detail.value
     })
   },
+  // 表单提交
   submitForm() {
     this.selectComponent('#form').validate((valid, errors) => {
       if (!valid) {
