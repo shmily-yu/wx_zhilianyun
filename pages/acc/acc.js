@@ -1,17 +1,50 @@
-// pages/acc/acc.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
+    error: '',
+    formData: {
+      // mobile_phone: "",
+      // password: "",
+      get_type: 0
+    },
 
+    rules: [
+      {
+        name: 'mobile',
+        rules: [{ required: true, message: '手机号必填' }, { mobile: true, message: '手机号格式不对' }]
+      },
+      {
+        name: 'password',
+        rules: { required: true, message: '密码必填' },
+      }
+    ]
   },
-
+  formInputChange(e) {
+    console.log(e, this.data.formData);
+    const { field } = e.currentTarget.dataset
+    this.setData({
+      [`formData.${field}`]: e.detail.value
+    })
+  },
+  submitForm() {
+    this.selectComponent('#form').validate((valid, errors) => {
+      if (!valid) {
+        const firstError = Object.keys(errors)
+        if (firstError.length) {
+          this.setData({
+            error: errors[firstError[0]].message
+          })
+        }
+      } else {
+        wx.showToast({
+          title: '校验通过'
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function () {
 
   },
 

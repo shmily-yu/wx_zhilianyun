@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/acc/acc",
     "pages/index/index",
     "pages/my/my",
-    "pages/acc/acc"
+    "pages/表单验证/表单验证"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -11,7 +12,5 @@
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "usingComponents": {
-    
-  }
+  "usingComponents": {}
 }

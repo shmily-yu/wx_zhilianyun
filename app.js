@@ -2,10 +2,10 @@ App({
   onLaunch() {
     wx.getStorage({
       key: 'token',
-      success(res) {
+      success: res => {
         console.log(res);
       },
-      fail(err) {
+      fail: err => {
         console.log(err);
         wx.navigateTo({
           url: "/pages/acc/acc"

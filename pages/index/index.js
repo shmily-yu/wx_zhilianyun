@@ -1,26 +1,37 @@
-import api from '../../request/api.js'
 Page({
-  data: {
-    value: '',
-    d: {
-      mobile_phone: "13586401416",
-      password: "111111",
-      get_type: 0
+    data: {
+        
     },
-  },
-  onLoad: function () {
-    api.getLogin({
-      mobile_phone: "13586401416",
-      password: "111111",
-      get_type: 0
-    }).then(res => {
-      console.log(res);
-    }).catch(err => {
-      console.log(err);
-    })
+    //options(Object)
+    onLoad: function(options){
+        
+    },
+    onReady: function(){
+        
+    },
+    onShow: function(){
+        
+    },
+    onHide: function(){
 
-  },
-  onSearch() {
-    console.log(this.data.value);
-  },
-})
+    },
+    onUnload: function(){
+
+    },
+    onPullDownRefresh: function(){
+
+    },
+    onReachBottom: function(){
+
+    },
+    onShareAppMessage: function(){
+
+    },
+    onPageScroll: function(){
+
+    },
+    //item(index,pagePath,text)
+    onTabItemTap:function(item){
+
+    }
+});

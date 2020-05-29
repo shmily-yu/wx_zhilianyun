@@ -1,2 +1,17 @@
-<!--pages/acc/acc.wxml-->
-<text>pages/acc/acc.wxml</text>
+<view class="box">
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+    <view class="logo"></view>
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+        <mp-cells title="单选列表项">
+            <mp-cell prop="mobile" title="手机号">
+                <input bindinput="formInputChange" data-field="mobile" class="weui-input" placeholder="手机号" />
+            </mp-cell>
+            <mp-cell prop="password" title="密码">
+                <input bindinput="formInputChange" data-field="password" class="weui-input" placeholder="密码" type="password" />
+            </mp-cell>
+        </mp-cells>
+    </mp-form>
+    <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+    </view>
+</view> 
