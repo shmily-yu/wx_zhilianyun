@@ -1,0 +1,16 @@
+<wxs src="../../utils/util.wxs" module="util"></wxs>
+<view class="news_item u-f u-f-jsb">
+    <view class="news_item_left">
+        <view class="news_item_title">{{item.title}}</view>
+        <view class="news_item_bottom u-f u-f-jsb">
+            <view class="news_item_bottom_left u-f-ac">
+                <view class="icon iconfont icon-yanjing"></view>
+                <view class="news_item_look">{{item.read_nums}}</view>
+            </view>
+            <view class="news_item_time">{{util.getTime(item.add_time)}}</view>
+        </view>
+    </view>
+    <view class="news_item_right">
+        <image class="img" src="{{item.imgurl}}" alt />
+    </view>
+</view>

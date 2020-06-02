@@ -1,0 +1,11 @@
+<view class="hot_news u-f u-f-jsb u-f-ac">
+    <view class="hot_news_bg u-f-ac">
+        <image class="img" src="../../images/kuang.png" />
+        <span class="hot_news_bg_word">{{word}}</span>
+    </view>
+    <view class="more_news" wx:if="{{right}}">
+        <navigator class="more" url="" hover-class="navigator-hover" open-type="navigate">
+            更多
+        </navigator>
+    </view>
+</view>

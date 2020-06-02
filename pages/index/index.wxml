@@ -1,13 +1,29 @@
-<swiper class="" autoplay interval="3000" duration="1000" indicator-dots circular style="padding:20px">
-    <swiper-item item-id="">
-        <van-image width="100%" height="100%" src="https://img.yzcdn.cn/vant/cat.jpeg" />
-    </swiper-item>
-    <swiper-item class="" item-id="">
-        <van-image width="100%" height="100%" src="https://img.yzcdn.cn/vant/cat.jpeg" />
-    </swiper-item>
-    <swiper-item class="" item-id="">
-        <van-image width="100%" height="100%" src="https://img.yzcdn.cn/vant/cat.jpeg" />
-    </swiper-item>
-</swiper>
-
-<scroll-view class="" scroll-y lower-threshold="50" scroll-top="0" scroll-into-view="" scroll-with-animation="false" bindscrolltoupper="" bindscrolltolower=""></scroll-view>
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <!-- 遮罩 -->
+    <mask wx:if="{{flag}}"></mask>
+    <!-- 搜索 -->
+    <van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+    <!-- 轮播 -->
+    <swiper class="swiper" indicator-dots autoplay interval="3000" duration="1000" circular>
+        <block wx:for="{{imgList}}" wx:key="index">
+            <swiper-item>
+                <image class="img" src="{{item.imgurl}}" mode="scaleToFill" lazy-load></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- 公告 -->
+    <view class="notice" hover-class="none" hover-stop-propagation="false">
+        <van-notice-bar bind:click="toNotice" text="{{text}}" backgroundColor="#ffffff" color="black">
+            <text slot="left-icon">【公告】</text>
+        </van-notice-bar>
+    </view>
+    <news-head word="热点资讯" right="true"></news-head>
+    <!-- 新闻 -->
+    <scroll-view class="" scroll-y lower-threshold="50" scroll-top="0" bindscrolltoupper="" bindscrolltolower="">
+        <block wx:for="{{list}}" wx:key="index">
+            <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+                <news-item item="{{item}}"></news-item>
+            </navigator>
+        </block>
+    </scroll-view>
+</view>

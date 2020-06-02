@@ -1,2 +1,20 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="my">
+  <user-info obj="{{obj}}"></user-info>
+  <block wx:for="{{list}}" wx:key="index">
+    <navigator class="item" target="" url="" hover-class="navigator-hover" open-type="navigate">
+      <view class="user_part u-f u-f-jsb">
+        <view class="u-f-ac">
+          <i class="{{item.img}} part_icon"></i>
+          <i class="part_name">{{item.part}}</i>
+        </view>
+        <view class="u-f-ac">
+          <i wx:if="{{item.info==='count'}}" class="count">{{obj.count}}人</i>
+          <i wx:if="{{item.info==='dot'}}" class="dot"></i>
+          <i class="icon iconfont icon-jiantou"></i>
+        </view>
+      </view>
+    </navigator>
+    <!-- <router-link :to="{path:item.path,query:item.info}">
+    </router-link> -->
+  </block>
+</view>

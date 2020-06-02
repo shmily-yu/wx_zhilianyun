@@ -20,3 +20,6 @@
 <view class="u-f-ajc">
     <navigator url="" class="link">验证码登录</navigator>
 </view>
+<view class="u-f-ajc ">
+    <navigator url="" class="singup link">注册</navigator>
+</view>

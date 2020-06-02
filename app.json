@@ -1,16 +1,35 @@
 {
   "pages": [
-    "pages/acc/acc",
-    "pages/yz/yz",
-    "pages/index/index",
     "pages/my/my",
-    "component/logo/logo"
+    "pages/index/index",
+    "pages/acc/acc"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "至联云",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#1afa29",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/zhuye2.png",
+        "selectedIconPath": "/images/zhuye.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/我的2.png",
+        "selectedIconPath": "/images/我的.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {}

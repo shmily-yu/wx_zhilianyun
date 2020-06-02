@@ -1,0 +1,12 @@
+.swiper {
+    margin: 10rpx;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.notice {
+    padding: 0 10rpx;
+}

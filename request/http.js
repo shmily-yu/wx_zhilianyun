@@ -11,7 +11,19 @@ const request = (path, options) => {
                 'Authorization': app.globalData.token//请求头携带token
             },
             success(res) {
-                res.statusCode === 200 ? resolve(res.data.result) : reject(res.data.result)
+                if (res.statusCode === 200) {
+                    if (res.data.result.Code === '400') {
+                        if (getCurrentPages()[0].route != 'pages/index/index') {
+                            wx.reLaunch({
+                                url: '/pages/index/index'
+                            })
+                        }
+                    } else {
+                        resolve(res.data.result)
+                    }
+                } else {
+                    reject(res.data.result)
+                }
             },
             fail(err) {
                 console.log(err);

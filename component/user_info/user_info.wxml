@@ -1,0 +1,21 @@
+<view class="user_info u-f-ac u-f-jsb">
+  <view class="img_box">
+    <!-- <img src="{{obj.imgurl}}" @error="obj.imgurl=pic" /> -->
+    <img src="{{obj.imgurl}}" />
+  </view>
+  <view class="intro">
+    <view class="name u-f-ac">
+      {{obj.true_name}}
+      <span class="tell">{{obj.mobile_phone}}</span>
+    </view>
+    <view class="comp">{{obj.comp_name}}</view>
+  </view>
+  <view class="btn u-f-ajc">
+    <view class="u-f-ajc">
+      <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+        编辑
+      </navigator>
+      <!-- <router-link :to="{name:'userinfo'}"></router-link> -->
+    </view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+.hot_news_bg {
+  position: relative;
+}
+
+.hot_news {
+  margin: 4px 0 0;
+  padding: 0 10rpx;
+}
+
+.img {
+  width: 260rpx;
+  height: 57rpx;
+}
+
+.hot_news_bg_word {
+  position: absolute;
+  left: 42rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #252429;
+}
+
+.more {
+  padding: 0 2px 0;
+  font-size: 24rpx;
+  font-weight: 500;
+  color: rgb(141, 134, 134);
+}

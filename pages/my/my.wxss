@@ -1,1 +1,44 @@
-/* pages/my/my.wxss */
+.my {
+    padding: 0 20rpx;
+}
+
+.item {
+    background: white;
+    border-radius: 10rpx;
+}
+
+i {
+    display: block;
+    font-style: normal;
+}
+
+.user_part {
+    margin: 20rpx 20rpx 0;
+    color: rgba(0, 0, 0, 0.719);
+    height: 120rpx;
+}
+
+.dot {
+    width: 15rpx;
+    height: 15rpx;
+    background: rgba(255, 82, 122, 1);
+    border-radius: 50%;
+}
+
+.icon-jiantou {
+    font-size: 40rpx;
+    padding: 0 0 0 26rpx;
+}
+
+.count {
+    font-size: 30rpx;
+}
+
+.part_icon {
+    font-size: 50rpx;
+    margin-right: 20rpx;
+}
+
+.part_name {
+    font-size: 30rpx;
+}

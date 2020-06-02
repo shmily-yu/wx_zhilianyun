@@ -1,17 +1,69 @@
 // pages/my/my.js
-Page({
+var app = getApp();
+import $api from '../../request/api'
 
+
+Page({
   /**
    * 页面的初始数据
    */
   data: {
+    obj: {},
+    list: [
+      {
+        img: "icon iconfont icon-tuijian",
+        part: "我的推荐",
+        info: "count",
+        path: "/recommend"
+      },
+      {
+        img: "icon iconfont icon-xiazai",
+        part: "我的专属讲师",
+        info: " ",
+        path: "/teacher"
+      },
+      {
+        img: "icon iconfont icon-13",
+        part: "分享",
+        info: "dot",
+        path: "/share"
+      },
+      {
+        img: "icon iconfont icon-mimasuo",
+        part: "密码",
+        info: "",
+        path: "/change"
+      },
+      {
+        img: "icon iconfont icon-guanyu",
+        part: "关于我们",
+        info: "",
+        path: "/about"
+      },
+      {
+        img: "icon iconfont icon-tuichu",
+        part: "退出账户",
+        info: { info: "exit" },
+        path: "/acc"
+      }
+    ]
 
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: () => {
+    if (app.globalData.mobile_phone) {
+      console.log(123);
+    } else {
+      app.mobile_phone_callback = res => {
+        console.log(res);
+      }
+    }
+    // $api.getMyInfo({ mobile_phone: app.globalData.mobile_phone }).then(res => {
+    //   console.log(res);
+    // });
 
   },
 

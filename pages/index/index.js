@@ -1,37 +1,64 @@
+import $api from '../../request/api'
+
 Page({
     data: {
-        
+        value: '',
+        flag: false,//没有登录则显示遮罩
+        imgList: [],
+        text: '',
+        list: []
     },
-    //options(Object)
-    onLoad: function(options){
-        
+    toNotice() {
+        console.log(123);
     },
-    onReady: function(){
-        
+    onLoad() {
+        wx.getStorage({
+            key: 'mobile_phone',
+            success: res => {
+                $api.getHome({ mobile_phone: res.data }).then(res => {
+                    this.setData({
+                        imgList: res.Response.lunbos,//轮播图
+                        text: res.Response.content_text,
+                        list: res.Response.news
+
+                    })
+                })
+            },
+            fail: res => {
+                console.log(res);
+                this.setData({
+                    flag: true
+                })
+
+            }
+        })
     },
-    onShow: function(){
-        
+    onReady: function () {
     },
-    onHide: function(){
+    onShow: function () {
+
 
     },
-    onUnload: function(){
+    onHide: function () {
 
     },
-    onPullDownRefresh: function(){
+    onUnload: function () {
 
     },
-    onReachBottom: function(){
+    onPullDownRefresh: function () {
 
     },
-    onShareAppMessage: function(){
+    onReachBottom: function () {
 
     },
-    onPageScroll: function(){
+    onShareAppMessage: function () {
+
+    },
+    onPageScroll: function () {
 
     },
     //item(index,pagePath,text)
-    onTabItemTap:function(item){
+    onTabItemTap: function (item) {
 
     }
 });
