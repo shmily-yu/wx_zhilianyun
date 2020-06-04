@@ -1,0 +1,9 @@
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<!-- 列表 -->
+<scroll-view class="" scroll-y lower-threshold="50" scroll-top="0"  bindscrolltolower="">
+    <block wx:for="{{list}}" wx:key="index">
+        <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+            <news-item item="{{item}}"></news-item>
+        </navigator>
+    </block>
+</scroll-view>

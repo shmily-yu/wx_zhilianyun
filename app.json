@@ -1,8 +1,12 @@
 {
   "pages": [
-    "pages/my/my",
     "pages/index/index",
-    "pages/acc/acc"
+    "pages/my/my",
+    "pages/acc/acc",
+    "pages/search/search",
+    "pages/notice/notice",
+    "pages/more/more",
+    "pages/news_detail/news_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

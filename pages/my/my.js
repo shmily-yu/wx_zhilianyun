@@ -49,22 +49,28 @@ Page({
     ]
 
   },
+  //获取页面数据
+  getData(val) {
+    $api.getMyInfo({ mobile_phone: val }).then(res => {
+      this.setData({
+        obj: res.Response
+      })
+    });
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: () => {
+  onLoad: function () {
     if (app.globalData.mobile_phone) {
-      console.log(123);
+      console.log('已存在');
+      this.getData(app.globalData.mobile_phone)
     } else {
+      console.log('不存在，再拿');
       app.mobile_phone_callback = res => {
-        console.log(res);
+        this.getData(res)
       }
     }
-    // $api.getMyInfo({ mobile_phone: app.globalData.mobile_phone }).then(res => {
-    //   console.log(res);
-    // });
-
   },
 
   /**

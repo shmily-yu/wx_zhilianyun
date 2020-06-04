@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "news-item": "/component/news_item/news_item",
+    "news-head": "/component/news_head/news_head"
+  }
+}

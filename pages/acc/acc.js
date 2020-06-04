@@ -36,31 +36,24 @@ Page({
         }
       } else {
         $api.getLogin(this.data.formData).then(res => {
-          console.log(res);
           if (res.Code === '200') {
             // 在本地存入手机号和token
             app.set_token(res.Response)
             app.set_phone(this.data.formData.mobile_phone)
-            // 修改app.js里公共数据
-            app.globalData.token = res.Response
-            app.globalData.mobile_phone = this.data.formData.mobile_phone
             // 登录成功
             wx.showToast({
               title: '登录成功',
               icon: 'success',
               duration: 2000
             })
+
             //关闭所有页面，打开到应用内的某个页面
             wx.reLaunch({
               url: '/pages/index/index'
             })
-            // 显示 tabBar
-            wx.showTabBar()
           } else {
-            wx.showToast({
-              title: res.Msg,
-              icon: 'none',
-              duration: 2000
+            this.setData({
+              error: '密码或账号错误！'
             })
           }
         })

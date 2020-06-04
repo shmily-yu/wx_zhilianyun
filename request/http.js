@@ -1,5 +1,3 @@
-const app = getApp()
-
 const request = (path, options) => {
     return new Promise((resolve, reject) => {
         wx.request({
@@ -8,16 +6,14 @@ const request = (path, options) => {
             data: options.method === 'GET' ? options.data : JSON.stringify(options.data),
             header: {
                 'Content-Type': 'application/json; charset=UTF-8',
-                'Authorization': app.globalData.token//请求头携带token
+                'Authorization': wx.getStorageSync('token')//请求头携带token
             },
             success(res) {
                 if (res.statusCode === 200) {
                     if (res.data.result.Code === '400') {
-                        if (getCurrentPages()[0].route != 'pages/index/index') {
-                            wx.reLaunch({
-                                url: '/pages/index/index'
-                            })
-                        }
+                        wx.reLaunch({
+                            url: '/pages/acc/acc'
+                        })
                     } else {
                         resolve(res.data.result)
                     }

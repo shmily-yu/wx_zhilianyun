@@ -1,0 +1,16 @@
+<view class="detail ex-head">
+    <view class="title">{{obj.title}}</view>
+    <view class="info u-f u-f-jsb">
+        <view class="eye">
+            <span class="icon iconfont icon-yanjing"></span>
+            <span>{{obj.is_show}}</span>
+        </view>
+        <view class="time">作者：{{obj.author}}</view>
+        <view class="time">{{addtime(obj.add_time)}}</view>
+    </view>
+    <view class="word" v-html="obj.content"></view>
+    <view class="end u-f-ajc">END</view>
+    <view class="u-f-ajc">
+        <image src="../../images/gungxian2.png" class="img" mode="scaleToFill" />
+    </view>
+</view>

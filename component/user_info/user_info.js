@@ -24,6 +24,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    imgErr() {
+      this.setData({ "obj.imgurl": '../../images/tx.png' })
+    }
 
   }
 })
