@@ -8,15 +8,13 @@ App({
       },
       fail: err => {
         console.log(err);
-        // wx.reLaunch({
-        //   url: '/pages/acc/acc'
-        // })
       }
     })
     wx.getStorage({
       key: 'mobile_phone',
       success: res => {
         this.globalData.mobile_phone = res.data;
+        // 回调
         if (this.mobile_phone_callback) {
           this.mobile_phone_callback(res.data)
         }

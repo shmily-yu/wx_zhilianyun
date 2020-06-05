@@ -4,5 +4,6 @@
     "news-item": "/component/news_item/news_item",
     "van-search": "@vant/weapp/search/index",
     "van-notice-bar": "@vant/weapp/notice-bar/index"
-  }
+  },
+  "navigationBarTitleText": "主页"
 }

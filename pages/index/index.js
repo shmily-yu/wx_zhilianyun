@@ -51,7 +51,6 @@ Page({
                 this.getData(res)
             }
         }
-
     },
     onReady: function () {
     },

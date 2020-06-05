@@ -2,5 +2,6 @@
   "usingComponents": {
     "van-search": "@vant/weapp/search/index",
     "news-item": "/component/news_item/news_item"
-  }
+  },
+  "navigationBarTitleText": "搜索"
 }

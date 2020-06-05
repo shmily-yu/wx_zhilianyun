@@ -11,6 +11,12 @@ const request = (path, options) => {
             success(res) {
                 if (res.statusCode === 200) {
                     if (res.data.result.Code === '400') {
+                        wx.removeStorage({
+                            key: 'token'
+                        });
+                        wx.removeStorage({
+                            key: 'mobile_phone'
+                        });
                         wx.reLaunch({
                             url: '/pages/acc/acc'
                         })

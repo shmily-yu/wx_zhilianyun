@@ -3,6 +3,7 @@
     "mp-toptips": "/miniprogram_npm/weui-miniprogram/toptips/toptips",
     "mp-form": "/miniprogram_npm/weui-miniprogram/form/form",
     "mp-cell": "/miniprogram_npm/weui-miniprogram/cell/cell",
-    "logo":"/component/logo/logo"
-  }
+    "logo": "/component/logo/logo"
+  },
+  "navigationBarTitleText": "密码登录"
 }
