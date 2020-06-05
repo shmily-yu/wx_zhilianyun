@@ -22,7 +22,6 @@ Page({
   getData() {
     let data = { mobile_phone: appInst.globalData.mobile_phone, new_title: this.data.value }
     $api.getSearch(data).then(res => {
-      console.log(res);
       this.setData({ list: res.Response })
       if (res.Response.length === 0) {
         wx.showToast({

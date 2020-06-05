@@ -21,14 +21,10 @@
     padding: 0 10rpx;
     font-size: 28rpx;
     font-weight: 500;
-    color: rgba(255, 255, 255, 1);
+    color: black;
     line-height: 48rpx;
 }
 
-.img {
-    width: 100%;
-    height: 100%;
-}
 
 .end {
     padding: 10rpx 0;
@@ -37,7 +33,7 @@
     color: rgba(196, 196, 196, 1);
 }
 
-.img {
+.sun_line {
     width: 370rpx;
     height: 30rpx;
     margin-left: 30rpx;

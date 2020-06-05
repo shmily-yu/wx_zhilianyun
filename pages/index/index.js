@@ -6,17 +6,17 @@ Page({
         value: '',
         imgList: [],
         text: '',
+        notice_id: '',
         list: [],
         mobile_phone: '',
         createcode: ''
     },
     toNotice() {
         wx.navigateTo({
-            url: '../notice/notice'
+            url: `../notice/notice?id=${this.data.notice_id}`
         });
     },
     onSearch(e) {
-        console.log(e.detail);
         wx.navigateTo({
             url: `../search/search?id=${e.detail}`
         });
@@ -29,6 +29,7 @@ Page({
                 imgList: res.Response.lunbos,//轮播图
                 text: res.Response.content_text,
                 list: res.Response.news,
+                notice_id: res.Response.notice_id,
                 mobile_phone: data
             })
         })

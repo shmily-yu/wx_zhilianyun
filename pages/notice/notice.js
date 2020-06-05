@@ -1,17 +1,37 @@
 // pages/notice/notice.js
+import $api from '../../request/api'
+var appInst = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    notice_id: '',
+    mobile_phone: appInst.globalData.mobile_phone,
+    obj: {},
+    content: ''
+  },
+  getData() {
+    let data = {
+      notice_id: this.data.notice_id,
+      mobile_phone: appInst.globalData.mobile_phone
+    }
+    $api.getNoticeId(data).then(res => {
+      this.setData({
+        obj: res.Response,
+        content: res.Response.content.replace(/<img/gi, '<img style="max-width:100%;height:auto;display:block" ')
+      })
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function (opt) {
+    this.setData({ notice_id: opt.id })
+    this.getData()
 
   },
 

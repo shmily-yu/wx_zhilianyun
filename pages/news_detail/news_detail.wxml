@@ -1,3 +1,4 @@
+<wxs src="../../utils/util.wxs" module="util"></wxs>
 <view class="detail">
     <view class="title">{{obj.title}}</view>
     <view class="info u-f u-f-jsb">
@@ -5,25 +6,27 @@
             <span class="icon iconfont icon-yanjing"></span>
             <span>{{obj.read_nums}}</span>
         </view>
-        <view class="time">{{addtime(obj.add_time)}}</view>
+        <view class="time">{{util.getTime(obj.add_time)}}</view>
     </view>
     <view class="u-f-ajc">
         <image src="{{obj.imgurl}}" class="bigpic" />
     </view>
-    <view class="word" v-html="obj.content"></view>
+    <view class="word">
+        <rich-text nodes="{{content}}"></rich-text>
+    </view>
     <view class="end u-f-ajc">END</view>
     <view class="u-f-ajc">
-        <image src="../../images/gungxian2.png" class="img" alt />
+        <image src="../../images/gungxian2.png" class="sun_line" alt />
     </view>
     <news-head word="相关资讯" right="{{false}}"></news-head>
     <!-- 新闻 -->
     <scroll-view class="" scroll-y lower-threshold="50" scroll-top="0" bindscrolltoupper="" bindscrolltolower="">
         <block wx:for="{{list}}" wx:key="index">
-            <navigator class="" target="" url="../../pages/news_detail/news_detail" hover-class="navigator-hover" open-type="navigate">
+            <navigator class="" target="" url="../../pages/news_detail/news_detail?id={{item.id}}&createcode={{createcode}}&mobile_phone={{mobile_phone}}" hover-class="navigator-hover" open-type="navigate">
                 <news-item item="{{item}}"></news-item>
             </navigator>
         </block>
     </scroll-view>
     <!-- 浮窗 -->
-    <float />
+    <float wx:if="{{flag}}" />
 </view>

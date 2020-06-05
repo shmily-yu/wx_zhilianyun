@@ -1,3 +1,4 @@
+<wxs src="../../utils/util.wxs" module="util"></wxs>
 <view class="detail ex-head">
     <view class="title">{{obj.title}}</view>
     <view class="info u-f u-f-jsb">
@@ -6,9 +7,11 @@
             <span>{{obj.is_show}}</span>
         </view>
         <view class="time">作者：{{obj.author}}</view>
-        <view class="time">{{addtime(obj.add_time)}}</view>
+        <view class="time">{{util.getTime(obj.add_time)}}</view>
     </view>
-    <view class="word" v-html="obj.content"></view>
+    <view class="word">
+        <rich-text nodes="{{content}}"></rich-text>
+    </view>
     <view class="end u-f-ajc">END</view>
     <view class="u-f-ajc">
         <image src="../../images/gungxian2.png" class="img" mode="scaleToFill" />

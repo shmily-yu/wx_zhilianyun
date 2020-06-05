@@ -1,4 +1,4 @@
-// component/mask/mask.js
+// component/float/float.js
 Component({
   /**
    * 组件的属性列表
@@ -6,7 +6,6 @@ Component({
   properties: {
 
   },
-
   options: {
     addGlobalClass: true,
   },
@@ -23,9 +22,5 @@ Component({
    */
   methods: {
 
-  },
-  created() {
-    wx.hideTabBar()//隐藏tabBar
   }
-
 })

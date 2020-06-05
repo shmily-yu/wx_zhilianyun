@@ -1,0 +1,47 @@
+.float {
+  position: fixed;
+  bottom: 0;
+  height: 140rpx;
+  border-radius: 5rpx;
+  width: 100%;
+  background: #1e1d21a2;
+}
+
+.logo {
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 50rpx;
+}
+
+.join {
+  margin-right: 32rpx;
+  width: 99rpx;
+  height: 46rpx;
+  background: #0081fa;
+  border-radius: 23rpx;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.center {
+  margin-left: 30rpx;
+}
+
+.linehead {
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #0081fa;
+  line-height: 36rpx;
+}
+
+.intro {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #c4c4c4;
+}

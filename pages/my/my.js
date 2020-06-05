@@ -62,15 +62,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
-    // if (app.globalData.mobile_phone) {
-    //   console.log('已存在');
-    //   this.getData(app.globalData.mobile_phone)
-    // } else {
-    //   console.log('不存在，再拿');
-    //   app.mobile_phone_callback = res => {
-    //     this.getData(res)
-    //   }
-    // }
     this.getData(app.globalData.mobile_phone)
   },
 
