@@ -1,6 +1,11 @@
-<van-tabs active="{{ active }}" bind:change="onChange">
-  <van-tab title="标签 1">内容 1</van-tab>
-  <van-tab title="标签 2">内容 2</van-tab>
-  <van-tab title="标签 3">内容 3</van-tab>
-  <van-tab title="标签 4">内容 4</van-tab>
+<van-tabs active="{{ zx_type }}" bind:change="onChange" color="	#0080FF">
+  <block wx:for="{{tabList}}" wx:key="index">
+    <van-tab title="{{item.type_name}}" name="{{item.id}}" color="#999999" name="{{item.id}}">
+      <block wx:for="{{list}}" wx:key="index">
+        <navigator class="" target="" url="../../pages/news_detail/news_detail?id={{item.id}}&createcode={{createcode}}&mobile_phone={{mobile_phone}}" hover-class="navigator-hover" open-type="navigate">
+          <news-item item="{{item}}"></news-item>
+        </navigator>
+      </block>
+    </van-tab>
+  </block>
 </van-tabs>

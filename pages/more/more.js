@@ -1,23 +1,47 @@
 // pages/more/more.js
-Page({
+var appInst = getApp();
+import $api from '../../request/api'
 
+Page({
   /**
    * 页面的初始数据
    */
   data: {
-    active: 0
-
+    zx_type: '',
+    tabList: [],
+    list: [],
+    mobile_phone: appInst.globalData.mobile_phone,
+    createcode: appInst.globalData.createcode
   },
   onChange(e) {
-    console.log(e);
-
+    this.getData(e.detail.name)
+  },
+  getType() {
+    let data = { mobile_phone: appInst.globalData.mobile_phone }
+    $api.getNewType(data).then(res => {
+      this.setData({ tabList: res.Response, zx_type: res.Response[0].id })
+      this.getData(res.Response[0].id)
+    })
+  },
+  getData(e) {
+    let data = { mobile_phone: appInst.globalData.mobile_phone, zx_type: e }
+    $api.getListData(data).then(res => {
+      this.setData({ list: res.Response })
+      if (res.Response.length === 0) {
+        wx.showToast({
+          title: '暂时没有相关资讯哦',
+          icon: 'none',
+          duration: 1500,
+        });
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function () {
+    this.getType()
   },
 
   /**
@@ -59,6 +83,11 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    wx.showToast({
+      title: '没有更多了',
+      icon: 'none',
+      duration: 1500,
+    });
 
   },
 
