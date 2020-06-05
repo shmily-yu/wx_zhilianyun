@@ -18,7 +18,7 @@ Page({
     onSearch(e) {
         console.log(e.detail);
         wx.navigateTo({
-            url: '../search/search'
+            url: `../search/search?id=${e.detail}`
         });
     },
 
@@ -53,10 +53,9 @@ Page({
         }
     },
     onReady: function () {
+
     },
     onShow: function () {
-
-
 
     },
     onHide: function () {
@@ -70,6 +69,11 @@ Page({
 
     },
     onReachBottom: function () {
+        wx.showToast({
+            title: '没有更多了',
+            icon: 'none',
+            duration: 1000
+        });
 
     },
     onShareAppMessage: function () {

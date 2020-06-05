@@ -1,8 +1,8 @@
-<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" bind:search="onSearch" />
 <!-- 列表 -->
-<scroll-view class="" scroll-y lower-threshold="50" scroll-top="0"  bindscrolltolower="">
+<scroll-view class="" scroll-y lower-threshold="50" scroll-top="0" bindscrolltoupper="" bindscrolltolower="">
     <block wx:for="{{list}}" wx:key="index">
-        <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+        <navigator class="" target="" url="../../pages/news_detail/news_detail?id={{item.id}}&createcode={{createcode}}&mobile_phone={{mobile_phone}}" hover-class="navigator-hover" open-type="navigate">
             <news-item item="{{item}}"></news-item>
         </navigator>
     </block>
