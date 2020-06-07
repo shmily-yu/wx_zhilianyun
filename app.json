@@ -6,7 +6,11 @@
     "pages/search/search",
     "pages/notice/notice",
     "pages/more/more",
-    "pages/news_detail/news_detail"
+    "pages/news_detail/news_detail",
+    "pages/user_msg/user_msg",
+    "pages/about_us/about_us",
+    "pages/share/share",
+    "pages/teacher/teacher"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,38 @@
+
+
+.box {
+    width: 520rpx;
+    height: 1087rpx;
+}
+
+.head_box {
+    position: relative;
+    padding: 60rpx 0;
+}
+
+.name {
+    font-size: 55rpx;
+    font-weight: bold;
+    color: black;
+}
+
+.item {
+    padding: 28rpx 0;
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: black;
+}
+
+.code {
+    width: 400rpx;
+    height: 400rpx;
+    margin-top: 100rpx;
+}
+
+.text {
+    padding: 30rpx 0;
+    font-weight: 500;
+    color: black;
+    font-size: 14rpx;
+}

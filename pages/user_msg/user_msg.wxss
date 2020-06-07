@@ -1,0 +1,24 @@
+/* pages/user_info/user_info.wxss */
+.userinfo {
+    background-size: 100% 100%;
+}
+
+.item {
+    padding: 60rpx 50rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: black;
+    border-bottom: #9999996e 1px solid;
+    background-color: #ffffff;
+}
+
+.icon-jiantou {
+    padding-left: 40rpx;
+    font-size: 30rpx;
+}
+
+.img {
+    width: 110rpx;
+    height: 110rpx;
+    border-radius: 50%;
+}

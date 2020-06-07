@@ -11,7 +11,7 @@
   </view>
   <view class="btn u-f-ajc">
     <view class="u-f-ajc btn_box">
-      <navigator class="editor" target="" url="" hover-class="navigator-hover" open-type="navigate">
+      <navigator class="editor" target="" url="../../pages/user_msg/user_msg" hover-class="navigator-hover" open-type="navigate">
         编辑
       </navigator>
     </view>

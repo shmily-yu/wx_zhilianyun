@@ -1,0 +1,32 @@
+<view class="userinfo">
+    <view class="u-f u-f-jsb item">
+        <view class="u-f-ac">头像</view>
+        <view class="u-f-ac">
+            <span>
+                <cover-image class="img" src="{{obj.imgurl}}"></cover-image>
+            </span>
+            <span class="icon iconfont icon-jiantou" />
+        </view>
+    </view>
+    <view class="u-f u-f-jsb item">
+        <view class="u-f-ac">姓名</view>
+        <view class="u-f-ac">
+            <span>{{obj.true_name}}</span>
+            <span class="icon iconfont icon-jiantou" />
+        </view>
+    </view>
+    <view class="u-f u-f-jsb item">
+        <view class="u-f-ac">手机号</view>
+        <view class="u-f-ac">
+            <span>{{obj.mobile_phone}}</span>
+            <span class="icon iconfont icon-jiantou" />
+        </view>
+    </view>
+    <view class="u-f u-f-jsb item">
+        <view class="u-f-ac">子公司</view>
+        <view class="u-f-ac">
+            <span>{{obj.comp_name}}</span>
+            <span class="icon iconfont icon-jiantou" />
+        </view>
+    </view>
+</view>

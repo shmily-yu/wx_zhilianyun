@@ -1,0 +1,6 @@
+<view class="u-f-ajc">
+    <image class="about_img" src="../../images/LOGO.png" alt />
+</view>
+<view class="text u-f-ajc">
+    <rich-text nodes="{{text}}"></rich-text>
+</view>

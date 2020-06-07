@@ -1,0 +1,18 @@
+<view class="teacher u-f-ajc">
+    <view class="box">
+      <!-- 名字-->
+      <view class="head_box">
+        <view class="name">讲师: {{obj.user_name}}</view>
+      </view>
+      <view class="u-f-jsb u-f item">
+        <view>{{obj.true_name}}</view>
+        <view>{{obj.mobile_phone}}</view>
+      </view>
+
+      <!--二维码  -->
+      <view class="u-f-ajc">
+        <cover-image src="{{obj.wechat_img}}" alt class="code" />
+      </view>
+      <view class="u-f-ajc text">微信二维码</view>
+    </view>
+  </view>

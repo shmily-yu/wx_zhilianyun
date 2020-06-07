@@ -1,0 +1,83 @@
+.share {
+  flex-direction: column;
+}
+.box {
+  margin-top: 40rpx;
+  position: relative;
+}
+.html {
+  z-index: -1;
+  width: 608rpx;
+  height: 873rpx;
+  background: #ffffff;
+  border: 16rpx solid #0081fa;
+}
+.title {
+  margin: 50rpx 0 20rpx;
+  letter-spacing: 6rpx;
+  height: 38rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #121325;
+}
+.img {
+  width: 377rpx;
+  height: 377rpx;
+  padding: 10rpx;
+}
+.code {
+  margin: 20rpx 0 20rpx;
+  width: 287rpx;
+  height: 90rpx;
+  background: #e5f2fe;
+  border-radius: 10rpx;
+}
+.code span {
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #0081fa;
+}
+.tip {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #6c6c6c;
+}
+.imgbox {
+  width: 387rpx;
+  margin: 50rpx auto;
+  position: relative;
+}
+.imgbox .angle {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+}
+.imgbox .angle_one {
+  left: 0;
+  top: 0;
+}
+.imgbox .angle_two {
+  right: 0;
+  top: 0;
+  transform: rotate(90deg);
+}
+.imgbox .angle_three {
+  left: 0;
+  bottom: 0;
+  transform: rotate(-90deg);
+}
+.imgbox .angle_four {
+  right: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+}
+.toast {
+  margin: 40rpx 0 0;
+  color: #fff;
+  font-size: 22rpx;
+}
+#img {
+  position: absolute;
+  width: 608rpx;
+  height: 873rpx;
+}

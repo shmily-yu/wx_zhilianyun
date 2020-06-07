@@ -1,53 +1,14 @@
-// pages/my/my.js
+// pages/user_msg/user_msg.js
 var app = getApp();
 import $api from '../../request/api'
-
-
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
     obj: {},
-    list: [
-      {
-        img: "icon iconfont icon-tuijian",
-        part: "我的推荐",
-        info: "count",
-        path: "/recommend"
-      },
-      {
-        img: "icon iconfont icon-xiazai",
-        part: "我的专属讲师",
-        info: " ",
-        path: "../../pages/teacher/teacher"
-      },
-      {
-        img: "icon iconfont icon-13",
-        part: "分享",
-        info: "dot",
-        path: "../../pages/share/share"
-      },
-      {
-        img: "icon iconfont icon-mimasuo",
-        part: "密码",
-        info: "",
-        path: "/change"
-      },
-      {
-        img: "icon iconfont icon-guanyu",
-        part: "关于我们",
-        info: "",
-        path: "../../pages/about_us/about_us"
-      },
-      {
-        img: "icon iconfont icon-tuichu",
-        part: "退出账户",
-        info: { info: "exit" },
-        path: "/acc"
-      }
-    ]
-
+    pic: "", //头像
   },
   //获取页面数据
   getData(val) {
@@ -57,12 +18,12 @@ Page({
       })
     });
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
+  onLoad: function (options) {
     this.getData(app.globalData.mobile_phone)
+
   },
 
   /**
