@@ -28,5 +28,8 @@ Component({
       this.setData({ "obj.imgurl": '../../images/tx.png' })
     }
 
-  }
+  },
+  created() {
+
+  },
 })

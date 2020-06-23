@@ -6,7 +6,7 @@
             <view class="intro">技术重构世界，数据引领未来。</view>
         </view>
     </view>
-    <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+    <navigator class="" target="" url="../../pages/signup/signup?id={{createcode}}" hover-class="navigator-hover" open-type="navigate">
         <view class="join u-f-ajc">加入</view>
     </navigator>
 </view>

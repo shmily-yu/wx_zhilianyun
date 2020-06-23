@@ -13,8 +13,8 @@
   <view wx:for="{{list[typeIndex].list}}" wx:key="index">
     <navigator class="" target="" url="../../pages/cust_info/cust_info?id={{item.user_id}}" hover-class="navigator-hover" open-type="navigate">
       <view class="item">
-        <view bindtap="changeStatus" style="background:{{item.is_talk===0?'rgb(0, 255, 213)':'rgb(0, 132, 255)'}}" class="u-f-ajc conect_type" data-index="{{index}}" data-userId="{{item.user_id}}">
-          <span class="conect_type_span u-f-ajc">{{item.is_talk===0?'已沟通':'未沟通'}}</span>
+        <view catchtap="changeStatus" style="background:{{item.is_talk!=0?'rgb(0, 255, 213)':'rgb(0, 132, 255)'}}" class="u-f-ajc conect_type" data-index="{{index}}" data-userId="{{item.user_id}}">
+          <span class="conect_type_span u-f-ajc">{{item.is_talk!=0?'已沟通':'未沟通'}}</span>
         </view>
         <view class="name">
           客户姓名

@@ -28,5 +28,5 @@
         </block>
     </scroll-view>
     <!-- 浮窗 -->
-    <float wx:if="{{flag}}" />
+    <float wx:if="{{flag}}" createcode="{{createcode}}" />
 </view>

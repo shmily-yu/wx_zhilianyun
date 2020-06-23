@@ -7,17 +7,21 @@
 }
 
 .img_box {
+  border: #ffffff 2rpx solid;
+  overflow: hidden;
   width: 110rpx;
   height: 110rpx;
   margin-left: 25rpx;
+  border-radius: 50%;
 }
 
-.img {
-  width: 100%;
-  height: 100%;
+/* .img {
+  overflow: hidden;
+  width: 110rpx;
+  height: 110rpx;
   border-radius: 50%;
   border: #ffffff 2rpx solid;
-}
+} */
 
 .intro {
   margin-top: 10rpx;

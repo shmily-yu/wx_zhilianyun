@@ -1,6 +1,7 @@
 // pages/news_detail/news_detail.js
 import $api from '../../request/api'
 
+
 Page({
 
   /**
@@ -46,14 +47,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
     wx.getStorage({
       key: 'mobile_phone',
       success: () => {
@@ -65,6 +58,16 @@ Page({
         console.log('未登');
       },
     });
+
+
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
   },
 
   /**

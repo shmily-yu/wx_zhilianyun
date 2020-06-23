@@ -19,7 +19,7 @@
                 <input bindinput="formInputChange" data-field="password" class="weui-input" type="password" />
             </mp-cell>
             <mp-cell prop="inviter_id" title="邀请码" ext-class="underline">
-                <input bindinput="formInputChange" data-field="inviter_id" class="weui-input" />
+                <input bindinput="formInputChange" value="{{formData.inviter_id}}" data-field="inviter_id" class="weui-input" />
             </mp-cell>
             <mp-cell prop="true_name" title="真实姓名" ext-class="underline">
                 <input bindinput="formInputChange" data-field="true_name" class="weui-input" />

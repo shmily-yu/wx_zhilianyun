@@ -27,7 +27,6 @@ Page({
       mobile_phone: appInst.globalData.mobile_phone
     };
     $api.getUserInfo(data).then(res => {
-      console.log(res);
 
       this.setData({
         obj: res.Response
@@ -52,7 +51,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (e) {
-    console.log(e);
     this.getUser(e.id)
 
   },

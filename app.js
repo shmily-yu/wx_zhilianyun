@@ -21,9 +21,7 @@ App({
       },
       fail: err => {
         console.log(err);
-        wx.reLaunch({
-          url: '/pages/acc/acc'
-        })
+
       }
     })
   },

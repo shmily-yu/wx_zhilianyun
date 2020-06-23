@@ -1,5 +1,7 @@
 // pages/signup/signup.js
 import $api from '../../request/api';
+var app = getApp();
+
 Page({
 
   /**
@@ -8,7 +10,6 @@ Page({
   data: {
     error: '',
     formData: {
-      get_type: 0//登录
     },
     rules: [
       {
@@ -53,16 +54,25 @@ Page({
       } else {
         $api.getSign(this.data.formData).then(res => {
           if (res.Code === '200') {
-            // 注册成功
             wx.showToast({
               title: '注册成功',
               icon: 'success',
               duration: 2000
             })
-
-            //关闭所有页面，打开到应用内的某个页面
-            wx.reLaunch({
-              url: `/pages/acc/acc?mobile_phone=${this.data.formData.mobile_phone}&password=${this.data.formData.password}`
+            $api.getLogin(
+              {
+                mobile_phone: this.data.formData.mobile_phone,
+                password: this.data.formData.password
+              }
+            ).then(res => {
+              if (res.Code === '200') {
+                // 在本地存入手机号和token
+                app.set_token(res.Response)
+                app.set_phone(this.data.formData.mobile_phone)
+                wx.switchTab({
+                  url: '../../pages/index/index'
+                });
+              }
             })
           } else {
             this.setData({
@@ -77,7 +87,12 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function (e) {
+    this.setData({
+      formData: {
+        inviter_id: e.id
+      }
+    })
 
   },
 

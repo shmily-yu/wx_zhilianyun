@@ -25,6 +25,7 @@ Page({
     getData(data) {
         // 获取首页数据
         $api.getHome({ mobile_phone: data }).then(res => {
+            console.log(res);
             this.setData({
                 imgList: res.Response.lunbos,//轮播图
                 text: res.Response.content_text,
@@ -44,10 +45,10 @@ Page({
     },
     onLoad() {
         if (app.globalData.mobile_phone) {
-            console.log('已存在');
+            console.log('已存在phone');
             this.getData(app.globalData.mobile_phone)
         } else {
-            console.log('不存在，再拿');
+            console.log('不存在phone，再拿');
             app.mobile_phone_callback = res => {
                 this.getData(res)
             }

@@ -1,6 +1,7 @@
 <view class="user_info u-f-ac u-f-jsb">
   <view class="img_box">
-    <cover-image class="img" src="{{obj.imgurl}}" binderror="imgErr"></cover-image>
+      <open-data type="userAvatarUrl"></open-data>
+    <!-- <cover-image class="img" src="{{obj.imgurl}}" binderror="imgErr"></cover-image> -->
   </view>
   <view class="intro">
     <view class="name u-f-ac">

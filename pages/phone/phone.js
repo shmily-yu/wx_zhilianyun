@@ -1,4 +1,7 @@
 // pages/phone/phone.js
+import $api from '../../request/api'
+var app = getApp();
+
 Page({
 
   /**
@@ -51,12 +54,14 @@ Page({
             })
 
             //关闭所有页面，打开到应用内的某个页面
-            wx.reLaunch({
-              url: '/pages/index/index'
-            })
+            wx.switchTab({
+              url: '../../pages/index/index'
+
+            });
+
           } else {
             this.setData({
-              error: '密码或账号错误！'
+              error: '验证码错误！'
             })
           }
         })
