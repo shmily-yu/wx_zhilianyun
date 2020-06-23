@@ -1,0 +1,12 @@
+<view class="custinfo u-f-ajc">
+    <view class="box">
+        <view class="head_box">
+            <view class="name">{{obj.true_name}}</view>
+        </view>
+        <!-- list -->
+        <view class="u-f-jsb u-f item" wx:for="{{list}}" wx:key="index">
+            <view>{{item.name}}</view>
+            <view>{{item.info}}</view>
+        </view>
+    </view>
+</view>

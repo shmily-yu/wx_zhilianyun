@@ -1,4 +1,4 @@
-// pages/user_msg/user_msg.js
+// pages/recommend/recommend.js
 var app = getApp();
 import $api from '../../request/api'
 Page({
@@ -7,32 +7,55 @@ Page({
    * 页面的初始数据
    */
   data: {
-    obj: {},
-    pic: "", //头像
+    nums_all: "",
+    talk_nums_all: "",
+    typeIndex: 0,
+    type: ["全部", "已沟通", "未沟通"],
+    list: []
   },
-  //获取页面数据
+  // 修改状态
+  changeStatus(e) {
+    let data = { mobile_phone: this.mobile_phone, user_id: id };
+    this.$api.getStatus(data).then(res => {
+      if (res) {
+        this.$toast.success("已沟通");
+        this.getData();
+      }
+    });
+  },
+  // tab切换
+  changType(e) {
+    this.setData({
+      typeIndex: e.currentTarget.dataset.index
+    })
+  },
   getData(val) {
-    $api.getMyInfo({ mobile_phone: val }).then(res => {
+    let data = { mobile_phone: val };
+    $api.getMyInvite(data).then(res => {
       this.setData({
-        obj: res.Response
+        nums_all: res.Response.nums_all,
+        talk_nums_all: res.Response.nums_all,
+        list: [
+          { name: "all_infos", list: res.Response.all_infos },//全部
+          { name: "no_talk_infos", list: res.Response.no_talk_infos },//未沟通
+          { name: "in_talk_infos", list: res.Response.in_talk_infos }//已沟通
+        ]
       })
     });
   },
-  imgErr() {
-    this.setData({ "obj.imgurl": '../../images/tx.png' })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.getData(app.globalData.mobile_phone)
-
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    console.log(this);
 
   },
 

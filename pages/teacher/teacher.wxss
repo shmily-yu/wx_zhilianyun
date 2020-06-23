@@ -1,8 +1,13 @@
-
+.teacher{
+    height: 100%;
+}
 
 .box {
     width: 520rpx;
     height: 1087rpx;
+    padding: 0 60rpx;
+    background: #ffffff;
+    border-radius: 10rpx;
 }
 
 .head_box {
@@ -19,7 +24,6 @@
 .item {
     padding: 28rpx 0;
     font-size: 30rpx;
-    font-family: PingFang SC;
     font-weight: 500;
     color: black;
 }
@@ -34,5 +38,5 @@
     padding: 30rpx 0;
     font-weight: 500;
     color: black;
-    font-size: 14rpx;
+    font-size: 20rpx;
 }

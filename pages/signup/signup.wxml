@@ -1,0 +1,35 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}" />
+<view class="u-f-ajc" hover-class="none" hover-stop-propagation="false">
+    <logo logoText='欢迎注册智联云！'></logo>
+</view>
+<view class="form">
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+        <mp-cells>
+            <mp-cell prop="mobile_phone" title="手机号" ext-class="underline">
+                <input bindinput="formInputChange" data-field="mobile_phone" class="weui-input" type="number" maxlength="11" />
+            </mp-cell>
+            <mp-cell prop="code" title="验证码" code_ ext-class="underline">
+                <input ext-class="iviewnput-line" bindinput="formInputChange" data-field="code" class="weui-input" type="number" />
+                <view slot="footer" class="code_view">
+                    <!-- 获取验证码 -->
+                    <phone-code phone="{{formData.mobile_phone}}" type="{{formData.get_type}}"></phone-code>
+                </view>
+            </mp-cell>
+            <mp-cell prop="password" title="密码" ext-class="underline">
+                <input bindinput="formInputChange" data-field="password" class="weui-input" type="password" />
+            </mp-cell>
+            <mp-cell prop="inviter_id" title="邀请码" ext-class="underline">
+                <input bindinput="formInputChange" data-field="inviter_id" class="weui-input" />
+            </mp-cell>
+            <mp-cell prop="true_name" title="真实姓名" ext-class="underline">
+                <input bindinput="formInputChange" data-field="true_name" class="weui-input" />
+            </mp-cell>
+        </mp-cells>
+    </mp-form>
+</view>
+<view class="weui-btn-area">
+    <button class="weui-btn" bindtap="submitForm">注册</button>
+</view>
+<view class="u-f-ajc ">
+    <navigator url="../../pages/acc/acc" class="singup link">密码登录</navigator>
+</view>

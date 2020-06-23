@@ -1,10 +1,13 @@
-import $api from '../../request/api';
-var app = getApp();
+// pages/phone/phone.js
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
     error: '',
     formData: {
-      get_type: 0
+      get_type: 1//登录
     },
     rules: [
       {
@@ -12,8 +15,8 @@ Page({
         rules: [{ required: true, message: '手机号必填' }, { mobile: true, message: '手机号格式不对' }]
       },
       {
-        name: 'password',
-        rules: { required: true, message: '密码必填' },
+        name: 'code',
+        rules: { required: true, message: '验证码必填' },
       }
     ]
   },
@@ -60,11 +63,11 @@ Page({
       }
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (e) {
-    console.log(e);
+  onLoad: function (options) {
 
   },
 

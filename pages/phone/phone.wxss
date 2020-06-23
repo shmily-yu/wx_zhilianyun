@@ -1,3 +1,4 @@
+/* pages/phone/phone.wxss */
 .form {
     padding: 0 40rpx;
 }
@@ -19,4 +20,7 @@
 .singup {
     position: fixed;
     bottom: 20rpx;
+}
+.code_view {
+    height: 54rpx;
 }

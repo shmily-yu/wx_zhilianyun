@@ -1,19 +1,21 @@
-import $api from '../../request/api';
-var app = getApp();
+// pages/password_one/password_one.js
+var appInst = getApp();
+
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
     error: '',
     formData: {
-      get_type: 0
+      mobile_phone: '',
+      get_type: 2//修改密码
     },
     rules: [
       {
-        name: 'mobile_phone',
-        rules: [{ required: true, message: '手机号必填' }, { mobile: true, message: '手机号格式不对' }]
-      },
-      {
-        name: 'password',
-        rules: { required: true, message: '密码必填' },
+        name: 'code',
+        rules: { required: true, message: '验证码必填' },
       }
     ]
   },
@@ -35,36 +37,22 @@ Page({
           })
         }
       } else {
-        $api.getLogin(this.data.formData).then(res => {
-          if (res.Code === '200') {
-            // 在本地存入手机号和token
-            app.set_token(res.Response)
-            app.set_phone(this.data.formData.mobile_phone)
-            // 登录成功
-            wx.showToast({
-              title: '登录成功',
-              icon: 'success',
-              duration: 2000
-            })
-
-            //关闭所有页面，打开到应用内的某个页面
-            wx.reLaunch({
-              url: '/pages/index/index'
-            })
-          } else {
-            this.setData({
-              error: '密码或账号错误！'
-            })
-          }
-        })
+        let data = JSON.stringify(this.data.formData)
+        wx.navigateTo({
+          url: `/pages/password_two/password_two?id=${data}`,
+        });
       }
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (e) {
-    console.log(e);
+  onLoad: function (options) {
+    // 存入手机号
+    this.setData({
+      ['formData.mobile_phone']: appInst.globalData.mobile_phone
+    })
 
   },
 

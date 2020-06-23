@@ -1,0 +1,3 @@
+<view>
+    <button disabled="{{wait}}" class="code" bindtap="getCode" size="mini">{{msg}}</button>
+</view>

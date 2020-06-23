@@ -1,21 +1,27 @@
+// pages/password_two/password_two.js
 import $api from '../../request/api';
-var app = getApp();
 Page({
+  /**
+   * 页面的初始数据
+   */
   data: {
     error: '',
     formData: {
-      get_type: 0
+
+
+
     },
     rules: [
       {
-        name: 'mobile_phone',
-        rules: [{ required: true, message: '手机号必填' }, { mobile: true, message: '手机号格式不对' }]
-      },
-      {
         name: 'password',
         rules: { required: true, message: '密码必填' },
+      },
+      {
+        name: 'password_again',
+        rules: [{ required: true, message: '请确认密码' }, { equalTo: 'password', message: '密码不一致' }],
       }
     ]
+
   },
   // 键盘输入时触发
   formInputChange(e) {
@@ -35,36 +41,41 @@ Page({
           })
         }
       } else {
-        $api.getLogin(this.data.formData).then(res => {
+        $api.getPwd(this.data.formData).then(res => {
+          console.log(res);
           if (res.Code === '200') {
-            // 在本地存入手机号和token
-            app.set_token(res.Response)
-            app.set_phone(this.data.formData.mobile_phone)
             // 登录成功
             wx.showToast({
-              title: '登录成功',
+              title: '修改成功',
               icon: 'success',
-              duration: 2000
+              duration: 2000,
             })
+            // 设置定时器
+            setTimeout(() => {
+              // 2秒后跳转到tabbar页面
+              wx.switchTab({
+                url: '../../pages/my/my',
+              });
+            }, 2000);
 
-            //关闭所有页面，打开到应用内的某个页面
-            wx.reLaunch({
-              url: '/pages/index/index'
-            })
           } else {
             this.setData({
-              error: '密码或账号错误！'
+              error: '修改失败'
             })
           }
         })
       }
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (e) {
-    console.log(e);
+  onLoad: function (val) {
+    // 存入手机号和验证码
+    this.setData({
+      formData: { ...JSON.parse(val.id), get_type: 2 }
+    })
 
   },
 

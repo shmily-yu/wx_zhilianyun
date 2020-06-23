@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "mp-toptips": "/miniprogram_npm/weui-miniprogram/toptips/toptips",
+    "mp-form": "/miniprogram_npm/weui-miniprogram/form/form",
+    "mp-cell": "/miniprogram_npm/weui-miniprogram/cell/cell",
+    "logo": "/component/logo/logo",
+    "phone-code": "/component/phone_code/phone_code"
+  },
+  "navigationBarTitleText": "验证码登录"
+}

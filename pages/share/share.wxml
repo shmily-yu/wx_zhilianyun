@@ -5,7 +5,7 @@
         <div class="title u-f-ajc">您的邀请码为</div>
         <div class="u-f-ajc">
           <span class="code u-f-ajc">
-            <span>{{obj.createcode}}</span>
+            <span class="creatcode">{{obj.createcode}}</span>
           </span>
         </div>
         <div class="tip u-f-ajc">好友可在注册时直接填写邀请码</div>

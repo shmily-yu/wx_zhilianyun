@@ -1,8 +1,8 @@
 .share {
   flex-direction: column;
+  height: 100vh;
 }
 .box {
-  margin-top: 40rpx;
   position: relative;
 }
 .html {
@@ -32,7 +32,7 @@
   background: #e5f2fe;
   border-radius: 10rpx;
 }
-.code span {
+.creatcode {
   font-size: 50rpx;
   font-weight: bold;
   color: #0081fa;
@@ -47,33 +47,33 @@
   margin: 50rpx auto;
   position: relative;
 }
-.imgbox .angle {
+ .angle {
   position: absolute;
   width: 40rpx;
   height: 40rpx;
 }
-.imgbox .angle_one {
+ .angle_one {
   left: 0;
   top: 0;
 }
-.imgbox .angle_two {
+ .angle_two {
   right: 0;
   top: 0;
   transform: rotate(90deg);
 }
-.imgbox .angle_three {
+ .angle_three {
   left: 0;
   bottom: 0;
   transform: rotate(-90deg);
 }
-.imgbox .angle_four {
+ .angle_four {
   right: 0;
   bottom: 0;
   transform: rotate(180deg);
 }
 .toast {
   margin: 40rpx 0 0;
-  color: #fff;
+  color: #0081fa;
   font-size: 22rpx;
 }
 #img {

@@ -1,0 +1,30 @@
+.custinfo {
+    position: relative;
+    height: 100%;
+}
+
+.box {
+    border-radius: 10rpx;
+    padding: 0 40rpx;
+    width: 588rpx;
+    background-color: #fff;
+}
+
+.head_box {
+    padding: 60rpx 0;
+    border-bottom: 2rpx dashed #999999;
+}
+
+.name {
+    font-size: 55rpx;
+    font-weight: bold;
+    color: #333;
+}
+
+.item {
+    padding: 28rpx 0;
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #333;
+}

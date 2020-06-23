@@ -1,0 +1,69 @@
+.recommend {
+  height: 100%;
+}
+
+.step,
+.all {
+  padding: 10rpx 60rpx;
+  font-weight: 500;
+  font-size: 36rpx;
+  color: black;
+}
+
+.type {
+  border-radius: 10rpx;
+  padding: 20rpx 60rpx;
+  font-weight: 500;
+  font-size: 30rpx;
+  color: white;
+}
+
+.type_bg {
+  background-color: rgb(0, 255, 213);
+  background-size: contain;
+}
+
+
+
+.partName {
+  border-radius: 10rpx;
+  width: 198rpx;
+  height: 54rpx;
+}
+
+.item {
+  background-color: white;
+  position: relative;
+  height: 188rpx;
+  border-radius: 10rpx;
+  margin: 10rpx 40rpx 10rpx 20rpx;
+  border: 2rpx solid white;
+}
+
+.name {
+  font-size: 30rpx;
+  margin: 40rpx 0 0 40rpx;
+}
+
+.name_span {
+  margin-left: 40rpx;
+}
+
+.phone {
+  font-size: 30rpx;
+  margin: 30rpx 0 0 40rpx;
+}
+
+.phone_span {
+  margin-left: 40rpx;
+}
+
+.conect_type {
+  border-radius: 10rpx;
+  position: absolute;
+  width: 128rpx;
+  height: 65rpx;
+  right: -20rpx;
+  top: 55rpx;
+  font-size: 28rpx;
+}

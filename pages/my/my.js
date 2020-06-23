@@ -14,7 +14,7 @@ Page({
         img: "icon iconfont icon-tuijian",
         part: "我的推荐",
         info: "count",
-        path: "/recommend"
+        path: "../../pages/recommend/recommend"
       },
       {
         img: "icon iconfont icon-xiazai",
@@ -32,7 +32,7 @@ Page({
         img: "icon iconfont icon-mimasuo",
         part: "密码",
         info: "",
-        path: "/change"
+        path: "../../pages/password_one/password_one"
       },
       {
         img: "icon iconfont icon-guanyu",
@@ -43,8 +43,8 @@ Page({
       {
         img: "icon iconfont icon-tuichu",
         part: "退出账户",
-        info: { info: "exit" },
-        path: "/acc"
+        info: "",
+        path: `../../pages/acc/acc?id=exit`
       }
     ]
 
