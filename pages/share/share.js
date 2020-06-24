@@ -1,29 +1,25 @@
 // pages/share/share.js
-var app = getApp();
-import $api from '../../request/api'
 Page({
-
   /**
    * 页面的初始数据
    */
 
   data: {
-    obj:{}
+    createcode: '',
+    code_url: ''
+  },
 
-  },
-  getData(val) {
-    $api.getShare({ mobile_phone: val }).then(res => {
-      this.setData({
-        obj: res.Response
-      })
-    });
-  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    this.getData(app.globalData.mobile_phone)
 
+  onLoad: function (e) {
+    console.log(e);
+    let url = decodeURIComponent(e.url)//字符串转义
+    this.setData({
+      createcode: e.code,
+      code_url: url
+    })
   },
 
   /**

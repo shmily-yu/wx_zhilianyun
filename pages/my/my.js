@@ -26,7 +26,7 @@ Page({
         img: "icon iconfont icon-13",
         part: "分享",
         info: "dot",
-        path: "../../pages/share/share"
+        path: ''
       },
       {
         img: "icon iconfont icon-mimasuo",
@@ -63,6 +63,13 @@ Page({
    */
   onLoad: function () {
     this.getData(app.globalData.mobile_phone)
+    let createcode = app.globalData.createcode
+    let code_url = app.globalData.code_url
+    this.setData({
+      'list[2].path': `../../pages/share/share?code=${createcode}&url=${code_url}`
+      // 修改数组里某个对象的值
+    })
+
   },
 
   /**

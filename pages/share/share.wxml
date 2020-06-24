@@ -1,26 +1,22 @@
 <div class="share  u-f-ajc">
-    <div class="u-f-ajc box">
-      <!-- html -->
-      <div class="html" id="html">
-        <div class="title u-f-ajc">您的邀请码为</div>
-        <div class="u-f-ajc">
-          <span class="code u-f-ajc">
-            <span class="creatcode">{{obj.createcode}}</span>
-          </span>
-        </div>
-        <div class="tip u-f-ajc">好友可在注册时直接填写邀请码</div>
-        <div class="u-f-ajc imgbox">
-          <image class="img" src="{{obj.code_url}}"  />
-          <image class="angle angle_one" src="../../images/形状 987 拷贝 10.png" alt />
-          <image class="angle angle_two" src="../../images/形状 987 拷贝 10.png" alt />
-          <image class="angle angle_three" src="../../images/形状 987 拷贝 10.png" alt />
-          <image class="angle angle_four" src="../../images/形状 987 拷贝 10.png" alt />
-        </div>
+  <div class="u-f-ajc box">
+    <!-- html -->
+    <div class="html" id="html">
+      <div class="title u-f-ajc">您的邀请码为</div>
+      <div class="u-f-ajc">
+        <span class="code u-f-ajc">
+          <span class="creatcode">{{createcode}}</span>
+        </span>
       </div>
-
-      <!-- img -->
-      <!-- <image :src="img" id="img" v-show="flag" @load="flag=true" /> -->
+      <div class="tip u-f-ajc">好友可在注册时直接填写邀请码</div>
+      <div class="u-f-ajc imgbox">
+        <image class="img" src="{{code_url}}" />
+        <image class="angle angle_one" src="../../images/形状 987 拷贝 10.png" alt />
+        <image class="angle angle_two" src="../../images/形状 987 拷贝 10.png" alt />
+        <image class="angle angle_three" src="../../images/形状 987 拷贝 10.png" alt />
+        <image class="angle angle_four" src="../../images/形状 987 拷贝 10.png" alt />
+      </div>
     </div>
-
-    <div class="u-f-ajc toast">扫描二维码完成邀请注册</div>
   </div>
+  <div class="u-f-ajc toast">扫描二维码完成邀请注册</div>
+</div>

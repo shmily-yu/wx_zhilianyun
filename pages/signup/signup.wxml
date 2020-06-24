@@ -31,5 +31,5 @@
     <button class="weui-btn" bindtap="submitForm">注册</button>
 </view>
 <view class="u-f-ajc ">
-    <navigator url="../../pages/acc/acc" class="singup link">密码登录</navigator>
+    <navigator url="../../pages/acc/acc" class="singup link">已有账号？</navigator>
 </view>

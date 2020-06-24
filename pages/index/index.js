@@ -25,7 +25,6 @@ Page({
     getData(data) {
         // 获取首页数据
         $api.getHome({ mobile_phone: data }).then(res => {
-            console.log(res);
             this.setData({
                 imgList: res.Response.lunbos,//轮播图
                 text: res.Response.content_text,
@@ -37,6 +36,7 @@ Page({
         // 获取邀请码
         $api.getShare({ mobile_phone: data }).then(res => {
             app.globalData.createcode = res.Response.createcode
+            app.globalData.code_url = res.Response.code_url
             // 存入邀请码
             this.setData({
                 createcode: res.Response.createcode
@@ -44,15 +44,26 @@ Page({
         })
     },
     onLoad() {
-        if (app.globalData.mobile_phone) {
-            console.log('已存在phone');
-            this.getData(app.globalData.mobile_phone)
-        } else {
-            console.log('不存在phone，再拿');
-            app.mobile_phone_callback = res => {
-                this.getData(res)
+        // if (app.globalData.mobile_phone) {
+        //     console.log('已存在phone');
+        //     this.getData(app.globalData.mobile_phone)
+        // } else {
+        //     console.log('不存在phone，再拿');
+        //     app.mobile_phone_callback = res => {
+        //         this.getData(res)
+        //     }
+        // }
+        wx.getStorage({
+            key: 'mobile_phone',
+            success: res => {
+                this.getData(res.data)
+            },
+            fail: () => {
+                wx.reLaunch({
+                    url: '/pages/acc/acc'
+                })
             }
-        }
+        })
     },
     onReady: function () {
 

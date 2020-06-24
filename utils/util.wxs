@@ -38,7 +38,9 @@ var util = {
             result = "刚刚";
         }
         return result;
-    }
+    }// 绘制图片
+
+
 
 }
 module.exports = {

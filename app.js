@@ -5,9 +5,6 @@ App({
       key: 'token',
       success: res => {
         this.globalData.token = res.data;
-      },
-      fail: err => {
-        console.log(err);
       }
     })
     wx.getStorage({
@@ -18,10 +15,6 @@ App({
         if (this.mobile_phone_callback) {
           this.mobile_phone_callback(res.data)
         }
-      },
-      fail: err => {
-        console.log(err);
-
       }
     })
   },
@@ -30,7 +23,8 @@ App({
     host: "http://crm.zjzhilianyun.com/api.php/Main",
     token: '',
     mobile_phone: '',
-    createcode: ''
+    createcode: '',
+    code_url:''
   },
   // 存储token
   set_token(val) {
