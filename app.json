@@ -9,11 +9,11 @@
     "pages/news_detail/news_detail",
     "pages/user_msg/user_msg",
     "pages/about_us/about_us",
-    "pages/share/share",
     "pages/teacher/teacher",
     "pages/recommend/recommend",
     "pages/password_one/password_one",
     "pages/password_two/password_two",
+    "pages/share/share",
     "pages/phone/phone",
     "pages/signup/signup",
     "pages/cust_info/cust_info"

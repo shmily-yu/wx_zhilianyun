@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "painter":"/component/painter/painter"
+  },
   "navigationBarTitleText": "分享"
 }

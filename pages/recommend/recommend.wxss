@@ -15,7 +15,7 @@
   padding: 20rpx 60rpx;
   font-weight: 500;
   font-size: 30rpx;
-  color: white;
+  color: black;
 }
 
 .type_bg {
